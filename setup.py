@@ -1,13 +1,21 @@
-from distutils.core import setup
-setup(
-  name = 'mypackage',
-  packages = ['mypackage'], # this must be the same as the name above
-  version = '0.1',
-  description = 'A random test lib',
-  author = 'Dacen Waters',
-  author_email = 'dacen.c.waters@gmail.com',
-  url = 'https://github.com/desanni/mypackage', # use the URL to the github repo
-  download_url = 'https://github.com/desanni/mypackage/archive/0.1.tar.gz', # I'll explain this in a second
-  keywords = ['testing', 'logging', 'example'], # arbitrary keywords
-  classifiers = [],
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="example_pkg",
+    version="0.0.1",
+    author="Dacen",
+    author_email="dacen.c.waters@gmail.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/desanni/mypackage",
+    packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python :: 2.7",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )
